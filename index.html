@@ -1057,106 +1057,49 @@
             <!-- ✅ FIN .contact-info -->
 
             <!-- ✅ Formulaire SÉPARÉ de contact-info -->
-            <form 
-                action="https://formspree.io/f/xdaweeae" 
-                method="POST"
-                id="contact-form"
-            >
-                <input type="hidden" name="_subject" 
-                       value="Nouveau message depuis le site ESAT Le Garric">
+            <form action="https://formspree.io/f/xdaweeae" method="POST">
+    <input type="hidden" name="_subject" value="Nouveau message depuis le site ESAT Le Garric">
+    <input type="hidden" name="_language" value="fr">
+    
+    <div class="form-group">
+        <label for="nom">Nom *</label>
+        <input type="text" id="nom" name="nom" required>
+    </div>
 
-                <!-- Anti-spam honeypot -->
-                <div style="display:none" aria-hidden="true">
-                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-                </div>
+    <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="_replyto" required>
+    </div>
 
-                <div class="form-group">
-                    <label for="nom">Nom *</label>
-                    <input 
-                        type="text" 
-                        id="nom" 
-                        name="nom"
-                        placeholder="Votre nom et prénom"
-                        required
-                        autocomplete="name"
-                        minlength="2"
-                        maxlength="100"
-                    >
-                </div>
+    <div class="form-group">
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone">
+    </div>
 
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email"
-                        placeholder="votre@email.fr"
-                        required
-                        autocomplete="email"
-                        maxlength="254"
-                    >
-                </div>
+    <div class="form-group">
+        <label for="sujet">Sujet *</label>
+        <select id="sujet" name="sujet" required>
+            <option value="">Sélectionnez un sujet</option>
+            <option value="espaces-verts">Espaces Verts</option>
+            <option value="blanchisserie">Blanchisserie</option>
+            <option value="menuiserie">Menuiserie</option>
+            <option value="nettoyage">Nettoyage Professionnel</option>
+            <option value="mecanique">Mécanique Auto</option>
+            <option value="multi-services">Multi-Services</option>
+            <option value="equipe-autonome">Équipe Autonome</option>
+            <option value="pain">Dépôt de Pain</option>
+            <option value="autre">Autre demande</option>
+        </select>
+    </div>
 
-                <div class="form-group">
-                    <label for="telephone">Téléphone</label>
-                    <input 
-                        type="tel" 
-                        id="telephone" 
-                        name="telephone"
-                        placeholder="06 12 34 56 78"
-                        autocomplete="tel"
-                        pattern="[0-9\s\.\-\+]{10,20}"
-                        maxlength="20"
-                    >
-                </div>
+    <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required></textarea>
+    </div>
 
-                <div class="form-group">
-                    <label for="sujet">Sujet *</label>
-                    <select id="sujet" name="sujet" required>
-                        <!-- ✅ option désactivée par défaut -->
-                        <option value="" disabled selected>
-                            Sélectionnez un sujet
-                        </option>
-                        <option value="espaces-verts">Espaces Verts</option>
-                        <option value="blanchisserie">Blanchisserie</option>
-                        <option value="menuiserie">Menuiserie</option>
-                        <option value="nettoyage">Nettoyage Professionnel</option>
-                        <option value="mecanique">Mécanique Auto</option>
-                        <option value="multi-services">Multi-Services</option>
-                        <option value="equipe-autonome">Équipe Autonome</option>
-                        <option value="pain">Dépôt de Pain</option>
-                        <option value="autre">Autre demande</option>
-                    </select>
-                </div>
+    <button type="submit">✉️ Envoyer le message</button>
+</form>
 
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea 
-                        id="message" 
-                        name="message"
-                        placeholder="Décrivez votre demande..."
-                        required
-                        minlength="10"
-                        maxlength="1000"
-                    ></textarea>
-                </div>
-
-                <!-- ✅ Message succès après envoi Formspree -->
-                <div id="form-success" style="
-                    display: none;
-                    background: #e8f5e9;
-                    color: #2c5f2d;
-                    padding: 1rem;
-                    border-radius: 8px;
-                    margin-bottom: 1rem;
-                    font-weight: 600;
-                ">
-                    ✅ Message envoyé ! Nous vous répondrons sous 48h.
-                </div>
-
-                <button type="submit">✉️ Envoyer le message</button>
-
-            </form>
             <!-- ✅ FIN form -->
 
         </div>
@@ -1180,7 +1123,9 @@
                     <li><a href="#services">Menuiserie</a></li>
                     <li><a href="#services">Nettoyage</a></li>
                     <li><a href="#services">Mécanique Auto</a></li>
+                    <li><a href="#services">Multi-Services</a></li>
                     <li><a href="#services">Dépôt de Pain</a></li>
+                    <li><a href="#services">Autre</a></li>
                 </ul>
             </div>
 
@@ -1211,6 +1156,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
