@@ -995,106 +995,174 @@
 
     <!-- Contact -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contactez-nous</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">
-                Nous sommes à votre écoute pour tout renseignement ou demande de devis
-            </p>
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">
+            Nous sommes à votre écoute pour tout renseignement ou demande de devis
+        </p>
 
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <strong>Adresse</strong><br>
-                            Le Garric<br>
-                            34330 La Salvetat-sur-Agout
-                        </div>
+        <div class="contact-grid">
+
+            <!-- ✅ Bloc infos de contact -->
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <strong>Adresse</strong><br>
+                        Le Garric<br>
+                        34330 La Salvetat-sur-Agout
                     </div>
+                </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <strong>Téléphone</strong><br>
-                            <a href="tel:0467976124" style="color: white; text-decoration: none;">04 67 97 61 24</a>
-                        </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <strong>Téléphone</strong><br>
+                        <a href="tel:0467976124" style="color: white; text-decoration: none;">
+                            04 67 97 61 24
+                        </a>
                     </div>
+                </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div>
-                            <strong>Email</strong><br>
-                            <a href="mailto:centre.garric@asei.asso.fr" style="color: white; text-decoration: none;">
-                                centre.garric@asei.asso.fr
-                            </a>
-                        </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:centre.garric@asei.asso.fr" style="color: white; text-decoration: none;">
+                            centre.garric@asei.asso.fr
+                        </a>
                     </div>
+                </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">🕐</div>
-                        <div>
-                            <strong>Horaires</strong><br>
-                            Lundi - Vendredi : 8h00 - 17h00
-                        </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <div>
+                        <strong>Horaires</strong><br>
+                        Lundi - Vendredi : 8h00 - 17h00
                     </div>
+                </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">🗺️</div>
-                        <div>
-                            <strong>Notre emplacement</strong><br>
-                            <a href="https://www.google.com/maps/place/A.S.E.I/@43.5961708,2.6830841,18.5z/data=!4m6!3m5!1s0x12b1ee0663083323:0xd5e048efb856857e!8m2!3d43.5960617!4d2.6838862!16s%2Fg%2F1v5drsnw?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D" 
-                               target="_blank" 
-                               style="color: white; text-decoration: underline;">
-                                Voir sur Google Maps →
-                            </a>
-                        </div>
-<div class="contact-form">
+                <div class="contact-item">
+                    <div class="contact-icon">🗺️</div>
+                    <div>
+                        <strong>Notre emplacement</strong><br>
+                        <a href="https://www.google.com/maps/place/A.S.E.I/@43.5961708,2.6830841,18.5z/data=!4m6!3m5!1s0x12b1ee0663083323:0xd5e048efb856857e!8m2!3d43.5960617!4d2.6838862!16s%2Fg%2F1v5drsnw?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D"
+                           target="_blank"
+                           style="color: white; text-decoration: underline;">
+                            Voir sur Google Maps →
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- ✅ FIN .contact-info -->
 
-<form action="https://formspree.io/f/xdaweeae" method="POST">
+            <!-- ✅ Formulaire SÉPARÉ de contact-info -->
+            <form 
+                action="https://formspree.io/f/xdaweeae" 
+                method="POST"
+                id="contact-form"
+            >
+                <input type="hidden" name="_subject" 
+                       value="Nouveau message depuis le site ESAT Le Garric">
 
-<input type="hidden" name="_subject" value="Message depuis le site ESAT Le Garric">
+                <!-- Anti-spam honeypot -->
+                <div style="display:none" aria-hidden="true">
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                </div>
 
-<input type="hidden" name="_next" value="#contact">
+                <div class="form-group">
+                    <label for="nom">Nom *</label>
+                    <input 
+                        type="text" 
+                        id="nom" 
+                        name="nom"
+                        placeholder="Votre nom et prénom"
+                        required
+                        autocomplete="name"
+                        minlength="2"
+                        maxlength="100"
+                    >
+                </div>
 
-<div class="form-group">
-<label>Nom *</label>
-<input type="text" name="nom" required>
-</div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email"
+                        placeholder="votre@email.fr"
+                        required
+                        autocomplete="email"
+                        maxlength="254"
+                    >
+                </div>
 
-<div class="form-group">
-<label>Email *</label>
-<input type="email" name="email" required>
-</div>
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input 
+                        type="tel" 
+                        id="telephone" 
+                        name="telephone"
+                        placeholder="06 12 34 56 78"
+                        autocomplete="tel"
+                        pattern="[0-9\s\.\-\+]{10,20}"
+                        maxlength="20"
+                    >
+                </div>
 
-<div class="form-group">
-<label>Téléphone</label>
-<input type="tel" name="telephone">
-</div>
-<div class="form-group">
-<label for="sujet">Sujet *</label>
-<select id="sujet" name="sujet" required>
-<option value="">Sélectionnez un sujet</option>
-<option value="espaces-verts">Espaces Verts</option>
-<option value="blanchisserie">Blanchisserie</option>
-<option value="menuiserie">Menuiserie</option>
-<option value="nettoyage">Nettoyage Professionnel</option>
-<option value="mecanique">Mécanique Auto</option>
-<option value="multi-services">Multi‑Services</option>
-<option value="equipe-autonome">Équipe Autonome</option>
-<option value="pain">Dépôt de Pain</option>
-<option value="autre">Autre demande</option>
-</select>
-<label>Message *</label>
-<textarea name="message" required></textarea>
+                <div class="form-group">
+                    <label for="sujet">Sujet *</label>
+                    <select id="sujet" name="sujet" required>
+                        <!-- ✅ option désactivée par défaut -->
+                        <option value="" disabled selected>
+                            Sélectionnez un sujet
+                        </option>
+                        <option value="espaces-verts">Espaces Verts</option>
+                        <option value="blanchisserie">Blanchisserie</option>
+                        <option value="menuiserie">Menuiserie</option>
+                        <option value="nettoyage">Nettoyage Professionnel</option>
+                        <option value="mecanique">Mécanique Auto</option>
+                        <option value="multi-services">Multi-Services</option>
+                        <option value="equipe-autonome">Équipe Autonome</option>
+                        <option value="pain">Dépôt de Pain</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
 
-<button type="submit">Envoyer le message</button>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea 
+                        id="message" 
+                        name="message"
+                        placeholder="Décrivez votre demande..."
+                        required
+                        minlength="10"
+                        maxlength="1000"
+                    ></textarea>
+                </div>
 
-</form>
+                <!-- ✅ Message succès après envoi Formspree -->
+                <div id="form-success" style="
+                    display: none;
+                    background: #e8f5e9;
+                    color: #2c5f2d;
+                    padding: 1rem;
+                    border-radius: 8px;
+                    margin-bottom: 1rem;
+                    font-weight: 600;
+                ">
+                    ✅ Message envoyé ! Nous vous répondrons sous 48h.
+                </div>
 
-</div>
-</div>
-    </section>
+                <button type="submit">✉️ Envoyer le message</button>
 
+            </form>
+            <!-- ✅ FIN form -->
+
+        </div>
+        <!-- ✅ FIN .contact-grid -->
+    </div>
+</section>
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -1143,6 +1211,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
